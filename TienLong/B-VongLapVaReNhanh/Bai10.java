@@ -1,25 +1,29 @@
 package bai10;
 import java.util.Scanner;
 public class Bai10 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		long x,y;
-		Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.print("x=");
-		x = scanner.nextLong();
+		x = sc.nextInt();
 		System.out.print("y=");
-		y = scanner.nextLong();
-		scanner.close();
+		y = sc.nextInt();
+		sc.close();
+		
 		System.out.println(multiply(x,y));
-	}
+		}
 	
 	public static long multiply(long x, long y) {
-		if(y==0)
-			return 0;
-		if(y>0)
-			return(x+multiply(x,y-1));
-		
-		return -multiply(x,-y);
+		long s=0;
+		while(y>1) {
+			if((y&1)!=0)
+				s += x;
+			x = x<<1;
+			y = y>>1;
+		}
+		return (x+s);
 	}
-}
+		
+		
+	}
+
