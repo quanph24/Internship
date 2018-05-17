@@ -5,7 +5,7 @@ package B_VongLapVaReNhanh;
 
 import java.util.Scanner;
 
-public class q10 {
+public class c10 {
 
     public static void main (String[] args) 
     {
